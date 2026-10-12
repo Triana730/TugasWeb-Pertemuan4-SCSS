@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Minimal 1 @each atau @for loop
+$theme-colors: (
+  primary: $primary-color,
+  dark: $primary-dark,
+  light: $white
+);
+
+@each $name, $color in $theme-colors {
+  .card-#{$name} {
+    background-color: $color;
+    @include card-shadow;
+    @include responsive-padding(md);
+    border-radius: 8px;
+    margin-bottom: $spacing-md;
+  }
+}

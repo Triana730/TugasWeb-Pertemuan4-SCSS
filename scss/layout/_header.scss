@@ -1,0 +1,23 @@
+@use '../abstracts/variables' as *;
+
+header {
+  background-color: $primary-color;
+  color: $white;
+  padding: $spacing-lg;
+
+  // Level 1 Nesting
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    // Level 2 Nesting
+    h1 {
+      font-size: 2rem;
+
+      // Level 3 Nesting
+      span {
+        color: $bg-color;
+      }
+    }
+  }
+}

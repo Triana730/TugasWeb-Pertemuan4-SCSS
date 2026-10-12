@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-lg;
+  padding: $spacing-lg;
+
+  .dashboard-card {
+    background: $white;
+    border-radius: 12px;
+    @include card-shadow;
+    padding: $spacing-md;
+
+    h3 {
+      font-size: 1.25rem;
+      color: $primary-color;
+    }
+  }
+}
